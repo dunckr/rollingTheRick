@@ -1,26 +1,27 @@
-chrome.extension.sendMessage({}, function(response) {
-  var readyStateCheckInterval = setInterval(function() {
-  if (document.readyState === "complete") {
-    clearInterval(readyStateCheckInterval);
+'use strict';
+(function ($) {
+  $(document).ready(function(){
+    var width = $( document ).width();
+    var height = $( document ).height();
+    var minTimeRange = 1000*60;
+    var maxTimeRange = 1000*60*10;
 
-    // ----------------------------------------------------------
-    // This part of the script triggers when page is done loading
-    console.log("Hello. This message was sent from scripts/inject.js");
-    // ----------------------------------------------------------
+    setInterval(function() {
+      inject('IAISUDbjXj0', width, height);
+    }, randomise(minTimeRange,maxTimeRange));
+  });
 
-    // determine a random time
-    var actualCode = ['/* Code here. Example: */alert(0);',
-                  "console.log('test inside here');",
-                  ' // Beware! This array have to be joined',
-                  ' // using a newline. Otherwise, missing semicolons',
-                  ' //  or single-line comments (//) will mess up your',
-                  ' //  code ----->'].join('\n');
-
-    var script = document.createElement('script');
-    script.textContent = actualCode;
-    (document.head||document.documentElement).appendChild(script);
-    script.parentNode.removeChild(script);
-
+  function inject(id,width,height) {
+    $('<iframe>', {
+      src: 'https://www.youtube.com/embed/' + id + '?autoplay=1',
+      id: 'player',
+      type: "text/html",
+      width: width,
+      height: height
+    }).insertBefore($('body'));
   }
-  }, 10);
-});
+
+  function randomise(max,min) {
+    return Math.floor(Math.random() * (max - min + 1) + min);;
+  }
+})(jQuery);

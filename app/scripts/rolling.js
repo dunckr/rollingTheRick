@@ -4,8 +4,7 @@
     var width = $( document ).width();
     var height = $( document ).height();
     var minTimeRange = 1000*60;
-    // var maxTimeRange = 1000*60*10;
-    var maxTimeRange = 1000*60+1;
+    var maxTimeRange = 1000*60*10;
 
     setInterval(function() {
         if (!isInjected()){

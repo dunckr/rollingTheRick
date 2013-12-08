@@ -8,6 +8,10 @@ Load up rick roll every 1 to 10 minutes.
 
 ## Install
 
+[From the Webstore](https://chrome.google.com/webstore/detail/rollingtherick/cnkjmfhncglngdhcdfmocgpbodagdekh)
+
+## Dev Install
+
 #### NPM
 
 `npm install

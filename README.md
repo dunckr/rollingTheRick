@@ -1,16 +1,14 @@
 # Rolling The Rick
 
-Rick roll from the browser!
+Rick roll from the browser
 
 ![Rick surprise](http://i.imgur.com/KUlvqT7.gif)
-
-Load up rick roll every 1 to 10 minutes.
 
 ## Install
 
 [From the Webstore](https://chrome.google.com/webstore/detail/rollingtherick/cnkjmfhncglngdhcdfmocgpbodagdekh)
 
-## Dev Install
+## Build
 
 #### NPM
 

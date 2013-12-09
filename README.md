@@ -1,6 +1,6 @@
 # Rolling The Rick
 
-Rick roll from the browser
+Rick roll inside Chrome
 
 ![Rick surprise](http://i.imgur.com/KUlvqT7.gif)
 
@@ -12,7 +12,7 @@ Rick roll from the browser
 
 #### NPM
 
-`npm install
+`npm install`
 
 #### Bower
 
